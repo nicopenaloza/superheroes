@@ -11,6 +11,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
+import { AutocompleteSearchbarComponent } from '../../components/autocomplete-searchbar/autocomplete-searchbar.component';
 import { ButtonComponent } from '../../components/button/button.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { ImageInputComponent } from '../../components/image-input/image-input.component';
@@ -23,8 +24,6 @@ import { SuperheroDetailsComponent } from './superhero-details/superhero-details
 import { SuperheroesPageListComponent } from './superheroes-page-list/superheroes-page-list.component';
 import { SuperheroesPageRoutingModule } from './superheroes-page-routing.module';
 import { SuperheroesPageComponent } from './superheroes-page.component';
-import { AutocompleteSearchbarComponent } from '../../components/autocomplete-searchbar/autocomplete-searchbar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({

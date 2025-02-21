@@ -1,15 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SuperheroesPageComponent } from './superheroes-page.component';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterOutlet } from '@angular/router';
-import { ContentComponent } from '../../layouts/content/content.component';
-import { HeaderComponent } from '../../components/header/header.component';
-import { SuperheroesPageListComponent } from './superheroes-page-list/superheroes-page-list.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterOutlet } from '@angular/router';
 import { AutocompleteSearchbarComponent } from '../../components/autocomplete-searchbar/autocomplete-searchbar.component';
+import { HeaderComponent } from '../../components/header/header.component';
 import { NoResultsComponent } from '../../components/no-results/no-results.component';
+import { ContentComponent } from '../../layouts/content/content.component';
+import { SuperheroesPageListComponent } from './superheroes-page-list/superheroes-page-list.component';
+import { SuperheroesPageComponent } from './superheroes-page.component';
 
 describe('SuperheroesPageComponent', () => {
   let component: SuperheroesPageComponent;

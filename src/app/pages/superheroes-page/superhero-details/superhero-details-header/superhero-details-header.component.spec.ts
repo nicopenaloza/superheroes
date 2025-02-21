@@ -1,9 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SuperheroDetailsHeaderComponent } from './superhero-details-header.component';
-import { ActivatedRoute } from '@angular/router';
-import { SuperheroesPageComponent } from '../../superheroes-page.component';
 import { MatIconModule } from '@angular/material/icon';
+import { SuperheroesPageComponent } from '../../superheroes-page.component';
+import { SuperheroDetailsHeaderComponent } from './superhero-details-header.component';
 
 describe('SuperheroDetailsHeaderComponent', () => {
   let component: SuperheroDetailsHeaderComponent;

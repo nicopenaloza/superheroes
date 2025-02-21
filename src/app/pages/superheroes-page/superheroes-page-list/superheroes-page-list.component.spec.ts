@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SuperheroesPageListComponent } from './superheroes-page-list.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AutocompleteSearchbarComponent } from '../../../components/autocomplete-searchbar/autocomplete-searchbar.component';
 import { NoResultsComponent } from '../../../components/no-results/no-results.component';
-import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { SuperheroesPageListComponent } from './superheroes-page-list.component';
 
 describe('SuperheroesPageListComponent', () => {
   let component: SuperheroesPageListComponent;

@@ -3,6 +3,7 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { IServerResponse } from '../../interfaces/server-response.interface';
 import { IPreSaveSuperhero, ISuperhero, ISuperheroService } from '../../interfaces/superheroes.interface';
 import { HttpStatusCode } from '@angular/common/http';
+import { SuperHero } from '../../models/superhero.model';
 
 @Injectable({
   providedIn: 'root'
@@ -62,7 +63,7 @@ export class SuperHeroesService implements ISuperheroService {
     superhero.name = superhero.name.trim();
 
     setTimeout(() => {
-      const _superhero: ISuperhero = { ...superhero, id: this._heroes.length };
+      const _superhero: ISuperhero = new SuperHero(this._heroes.length, superhero.name, superhero.power, superhero.photo);
 
       this._heroes.push(_superhero);
       this._onSuperheroesChange.next(this._heroes);
@@ -82,9 +83,19 @@ export class SuperHeroesService implements ISuperheroService {
     const response = new Subject<IServerResponse<ISuperhero>>();
 
     setTimeout(() => {
-      this._heroes[superhero.id] = superhero;
+      const heroIndex = this._heroes.findIndex(hero => hero.id === superhero.id);
+      if (heroIndex === -1) {
+        response.error({
+          status: HttpStatusCode.NotFound,
+          message: 'Superhéroe no encontrado',
+          data: null
+        });
+        return;
+      }
+
+      this._heroes[heroIndex] = superhero;
       this._onSuperheroesChange.next(this._heroes);
-      console.log(this._heroes);
+
       response.next({
         status: HttpStatusCode.Ok,
         message: 'Superheroe creado correctamente',
