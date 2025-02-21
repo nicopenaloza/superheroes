@@ -117,9 +117,7 @@ export class SuperheroDetailsComponent implements OnInit, OnDestroy {
           this._router.navigate([PATHS.SUPERHEROES, value.data.id]);
         }
 
-        this.superHeroForm.disable();
-        this.isEditing.set(false);
-        this.loading.set(false);
+        this._stopEditing();
       },
       error: () => {
         this.loading.set(false);
@@ -130,19 +128,19 @@ export class SuperheroDetailsComponent implements OnInit, OnDestroy {
   updateHero(): void {
     this._superheroesService.updateSuperhero(this.superHeroForm.value).pipe(first()).subscribe({
       next: (value) => {
-        if (this.isNewHero()) {
-          this._router.navigate([PATHS.SUPERHEROES, value.data.id]);
-        }
-        
         this.heroPreEdit = value.data;
-        this.superHeroForm.disable();
-        this.isEditing.set(false);
-        this.loading.set(false);
+        this._stopEditing();
       },
       error: () => {
         this.loading.set(false);
       }
     });
+  }
+
+  private _stopEditing(): void {
+    this.superHeroForm.disable();
+    this.isEditing.set(false);
+    this.loading.set(false);
   }
 
   saveHero(): void {

@@ -14,7 +14,7 @@
       <app-button [disabled]="loading" *ngIf="!isNewHero" color="danger" (onClick)="cancel()">
         Cancelar
       </app-button>
-      <app-button [disabled]="loading" (onClick)="save.emit()">Guardar</app-button>
+      <app-button [disabled]="loading || !isFormValid" (onClick)="save.emit()">Guardar</app-button>
     </ng-template>
     <app-button [disabled]="loading" *ngIf="!isEditing" (click)="edit.emit()"> Editar </app-button>
   </div>

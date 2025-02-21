@@ -14,6 +14,7 @@ export class SuperheroDetailsHeaderComponent {
   @Input() isNewHero!: boolean;
   @Input() loading!: boolean;
   @Input() isFormDirty!: boolean;
+  @Input() isFormValid!: boolean;
   @Input() showActions!: boolean;
   @Output() save: EventEmitter<void> = new EventEmitter<void>();
   @Output() edit: EventEmitter<void> = new EventEmitter<void>();

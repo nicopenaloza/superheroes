@@ -2,6 +2,7 @@
   <app-superhero-details-header
     [isNewHero]="isNewHero()"
     [isEditing]="isEditing()"
+    [isFormValid]="superHeroForm.valid"
     [loading]="loading()"
     [isFormDirty]="superHeroForm.dirty"
     [showActions]="!notFound() && !loading()"
