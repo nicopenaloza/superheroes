@@ -1,0 +1,17 @@
+.button-danger {
+    background-color: rgb(199, 20, 20) !important;
+}
+
+.button {
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}

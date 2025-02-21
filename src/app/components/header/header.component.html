@@ -1,0 +1,14 @@
+<mat-toolbar class="header-container">
+  <app-title [title]="title"></app-title>
+  <div class="header-container-buttons">
+    <button
+      *ngIf="showNewButton"
+      mat-icon-button
+      (click)="onNewButtonClick.emit()"
+      matTooltip="Crear un nuevo heroe"
+      aria-label="Crear un nuevo heroe"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

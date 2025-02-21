@@ -1,0 +1,22 @@
+<app-content class="hero-details-container">
+  <app-superhero-details-header
+    [isNewHero]="isNewHero()"
+    [isEditing]="isEditing()"
+    [loading]="loading()"
+    [isFormDirty]="superHeroForm.dirty"
+    [showActions]="!notFound() && !loading()"
+    (save)="saveHero()"
+    (edit)="edit()"
+    (resetForm)="cancelEdit()"
+  />
+  <app-superhero-details-data
+    [superHeroForm]="superHeroForm"
+    [isEditing]="isEditing()"
+    *ngIf="!notFound() && !loading()"
+  />
+  <app-no-results size="small" [showButton]="false" message="Superhéroe no encontrado." *ngIf="notFound() && !loading()" />
+
+  <div class="spinner-container" *ngIf="loading()">
+    <mat-spinner />
+  </div>
+</app-content>

@@ -1,0 +1,10 @@
+<div class="no-data-container">
+  <div class="no-data-icon" [ngClass]="{
+    'no-data-icon--small': size === 'small',
+    'no-data-icon--large': size === 'large'
+  }">¯\_( &nbsp;͡&nbsp;.&nbsp; ͡&nbsp;)_/¯</div>
+  <p class="no-data-text">{{message}}</p>
+  <button *ngIf="showButton" mat-raised-button color="primary" (click)="addSuperhero()">
+    Agregar un nuevo héroe
+  </button>
+</div>

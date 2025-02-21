@@ -1,0 +1,21 @@
+<div class="hero-details-toolbar">
+  <div class="hero-details-toolbar-start">
+    <button
+      mat-icon-button
+      (click)="close()"
+      matTooltip="Cerrar detalles"
+      aria-label="Cerrar detalles"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+  <div class="hero-details-toolbar-end" *ngIf="showActions">
+    <ng-template [ngIf]="isEditing">
+      <app-button [disabled]="loading" *ngIf="!isNewHero" color="danger" (onClick)="cancel()">
+        Cancelar
+      </app-button>
+      <app-button [disabled]="loading" (onClick)="save.emit()">Guardar</app-button>
+    </ng-template>
+    <app-button [disabled]="loading" *ngIf="!isEditing" (click)="edit.emit()"> Editar </app-button>
+  </div>
+</div>

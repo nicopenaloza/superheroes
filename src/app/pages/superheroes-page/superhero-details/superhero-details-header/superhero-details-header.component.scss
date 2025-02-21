@@ -1,0 +1,10 @@
+.hero-details-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .hero-details-toolbar-end {
+    display: flex;
+    gap: 0.5em;
+  }
+}

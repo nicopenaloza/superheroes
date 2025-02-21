@@ -1,0 +1,21 @@
+<form class="searchbar-form" (ngSubmit)="onSubmitEvent()">
+  <input
+    type="text"
+    placeholder="{{ placeholder }}"
+    aria-label="Search"
+    matInput
+    [formControl]="formControl"
+    [matAutocomplete]="auto"
+    (input)="onChangeEvent()"
+    class="search-input full-width"
+  />
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let option of options" [value]="option.label">
+      {{ option.label }}
+    </mat-option>
+  </mat-autocomplete>
+  <button mat-icon-button [disabled]="loading" type="submit">
+    <mat-icon *ngIf="!loading">search</mat-icon>
+    <mat-spinner *ngIf="loading" class="spinner" />
+  </button>
+</form>

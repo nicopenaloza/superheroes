@@ -1,0 +1,30 @@
+.no-data-container {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.no-data-icon {
+  font-size: 72px;
+
+  &.no-data-icon--small {
+    font-size: 28px;
+  }
+
+  color: #505050;
+  padding: 1em;
+}
+
+.no-data-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  margin: 10px 0;
+}
+
+button {
+  margin-top: 10px;
+}

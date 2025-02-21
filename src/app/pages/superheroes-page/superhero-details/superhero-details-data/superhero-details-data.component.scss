@@ -1,0 +1,34 @@
+.hero-details-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .hero-details-form-field {
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  }
+
+  .hero-details-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin: 5em;
+    width: 100%;
+
+    .hero-details-image-container {
+      width: 100%;
+      max-width: 256px;
+      aspect-ratio: 1;
+      contain: content;
+      border-radius: 100%;
+
+      .hero-details-image {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<app-button class="file-input-button" (onClick)="fileInput.click()">
+  Elegir Imagen
+</app-button>
+<input
+  hidden
+  #fileInput
+  type="file"
+  accept="image/*"
+  (change)="onFileSelected()"
+/>

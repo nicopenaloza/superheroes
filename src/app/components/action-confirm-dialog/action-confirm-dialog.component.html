@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+<mat-dialog-content>
+  <p>{{ data.message }}</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button [disabled]="loading()" (click)="cancel()">
+    {{ data.cancelText }}
+  </button>
+  <button mat-button [disabled]="loading()" (click)="confirm()" cdkFocusInitial>
+    @if (loading()) {
+    <mat-spinner class="spinner" />
+    } @else { {{ data.confirmText }} }
+  </button>
+</mat-dialog-actions>

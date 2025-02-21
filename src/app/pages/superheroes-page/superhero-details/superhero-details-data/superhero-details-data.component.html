@@ -1,0 +1,26 @@
+<form [formGroup]="superHeroForm" class="hero-details-form">
+  <div class="hero-details-photo-container">
+    <div class="hero-details-image-container">
+      <img
+        class="hero-details-image"
+        src="{{ superHeroForm.get('photo')?.value | avatar }}"
+        alt="Superman"
+      />
+    </div>
+
+    <app-image-input
+      *ngIf="isEditing"
+      (onFileChange)="superHeroForm.get('photo')?.setValue($event)"
+    ></app-image-input>
+  </div>
+
+  <mat-form-field class="hero-details-form-field">
+    <mat-label>Nombre de Super Heroe</mat-label>
+    <input formControlName="name" matInput placeholder="Super man" />
+  </mat-form-field>
+
+  <mat-form-field class="hero-details-form-field">
+    <mat-label>Nombre del poder</mat-label>
+    <input formControlName="power" matInput placeholder="Super fuerza" />
+  </mat-form-field>
+</form>

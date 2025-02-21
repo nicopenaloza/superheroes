@@ -1,0 +1,13 @@
+<button
+  mat-flat-button
+  (click)="onClick.emit()"
+  class="button"
+  [ngClass]="{
+    'button-danger': color === 'danger',
+  }"
+  [disabled]="disabled"
+  matTooltip="Crear un nuevo heroe"
+  aria-label="Crear un nuevo heroe"
+>
+  <ng-content></ng-content>
+</button>

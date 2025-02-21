@@ -1,0 +1,27 @@
+<mat-drawer-container
+  class="super-heroes-drawer-container"
+  [hasBackdrop]="true"
+>
+  <mat-drawer
+    #matDrawer
+    mode="side"
+    [opened]="false"
+    [position]="'end'"
+    [disableClose]="true"
+    (closed)="onDetailsClose()"
+  >
+    <router-outlet key="route"></router-outlet>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-content>
+      <app-header
+        title="Super Heroes"
+        [showNewButton]="!detailsOpened"
+        (onNewButtonClick)="openDetails()"
+      />
+      <app-superheroes-list
+        (onDetailsOpen)="openDetails($event)"
+      ></app-superheroes-list>
+    </app-content>
+  </mat-drawer-content>
+</mat-drawer-container>
