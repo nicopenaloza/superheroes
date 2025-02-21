@@ -24,6 +24,7 @@ import { SuperheroDetailsComponent } from './superhero-details/superhero-details
 import { SuperheroesPageListComponent } from './superheroes-page-list/superheroes-page-list.component';
 import { SuperheroesPageRoutingModule } from './superheroes-page-routing.module';
 import { SuperheroesPageComponent } from './superheroes-page.component';
+import { UppercaseDirective } from '../../directives/uppercase/uppercase.directive';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { SuperheroesPageComponent } from './superheroes-page.component';
     ButtonComponent,
     HeaderComponent,
     ContentComponent,
+    UppercaseDirective,
     NoResultsComponent,
     ImageInputComponent,
     AutocompleteSearchbarComponent,
